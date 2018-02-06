@@ -1,5 +1,9 @@
+package Main;
+
+import test.Test;
 import java.util.Scanner;
-import java.lang.Math;
+import Logic.Logic;
+
 public class Main {
     public static void main(String[] args) {
         double i ;
@@ -12,14 +16,14 @@ public class Main {
         a = num.nextDouble();
         System.out.print("\nВведите правую границу: ");
         b = num.nextDouble();
+        Test.granici( a, b );
         System.out.print("\nВведите шаг: ");
         h = num.nextDouble();
-        i = a;
-        while (i>=a && i<=b){
+        Test.shag( h );
+        for ( i = a ; i>=a && i<=b; i+=h){
 
-            fx = Math.tan(2*i)-3;
+            fx = Logic.logic(i);
             System.out.println(i + ":   " + fx);
-            i+=h;
 
         }
     }
