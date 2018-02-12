@@ -16,10 +16,10 @@ public class Main {
         a = num.nextDouble();
         System.out.print("\nВведите правую границу: ");
         b = num.nextDouble();
-        Test.granici( a, b );
+        Test.borders( a, b );
         System.out.print("\nВведите шаг: ");
         h = num.nextDouble();
-        Test.shag( h );
+        Test.step( h );
         for ( i = a ; i>=a && i<=b; i+=h){
 
             fx = Logic.logic(i);
